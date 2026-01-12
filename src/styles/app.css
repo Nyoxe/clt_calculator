@@ -302,3 +302,64 @@ body {
         position: static;
     }
 }
+
+/* --- MOBILE OPTIMIZATIONS --- */
+@media (max-width: 600px) {
+    .app {
+        padding: 10px;
+    }
+
+    .layout__header-content {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .layout__title {
+        font-size: 24px;
+    }
+
+    .layout__header-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .duo-button {
+        flex: 1;
+        justify-content: center;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .cartoon-panel {
+        padding: 16px;
+    }
+
+    /* Ajuste para o item de dia em Mobile */
+    .cartoon-day {
+        grid-template-columns: 1fr;
+        /* Empilha tudo em mobile */
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .cartoon-icon {
+        display: none;
+        /* Esconde ícone grande para economizar espaço lateral */
+    }
+
+    .layout__days-scroll-container {
+        padding-right: 0;
+        max-height: none;
+        /* Remove scroll interno para usar o do navegador */
+    }
+
+    .layout__settings-modal {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        max-height: 100vh;
+    }
+}
