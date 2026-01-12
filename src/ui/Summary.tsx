@@ -16,7 +16,6 @@
  * - Props tipadas com MonthlySummary
  */
 
-import React from 'react';
 import type { MonthlySummary } from '../core/types';
 import { calculateHourlyValue, calculateOvertimeBreakdown } from '../core/payroll';
 import './Summary.css';
