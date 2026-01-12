@@ -1,0 +1,251 @@
+/**
+ * SettingsPanel.css
+ * 
+ * Estilos para o componente SettingsPanel.
+ * Layout limpo com fieldsets agrupados e destaque para botões.
+ */
+
+.settings-panel {
+    background-color: var(--duo-white);
+    border: 1px solid var(--duo-gray);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: var(--duo-text);
+}
+
+/* Header */
+.settings-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--duo-navy);
+}
+
+.settings-panel__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--duo-navy);
+    margin: 0;
+}
+
+/* Content */
+.settings-panel__content {
+    display: block;
+}
+
+/* Formulário */
+.settings-panel__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.settings-panel__fieldset {
+    border: 1px solid var(--duo-gray);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 0;
+}
+
+.settings-panel__legend {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--duo-gray-dark);
+    padding: 0 8px;
+}
+
+.settings-panel__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.settings-panel__field:last-child {
+    margin-bottom: 0;
+}
+
+.settings-panel__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--duo-text);
+}
+
+.settings-panel__optional {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--duo-gray-dark);
+    font-style: italic;
+}
+
+.settings-panel__input,
+.settings-panel__select {
+    padding: 10px 12px;
+    border: 1px solid var(--duo-gray);
+    background-color: var(--duo-white);
+    color: var(--duo-text);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-panel__input:focus,
+.settings-panel__select:focus {
+    outline: none;
+    border-color: var(--duo-navy);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.settings-panel__value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--duo-gray-dark);
+    padding: 10px 12px;
+    background-color: var(--duo-gray-light);
+    border-radius: 4px;
+}
+
+/* Ações (botões) */
+.settings-panel__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding-top: 16px;
+    border-top: 1px solid var(--duo-gray);
+}
+
+.settings-panel__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.settings-panel__button:hover {
+    transform: translateY(-1px);
+}
+
+.settings-panel__button:active {
+    transform: translateY(0);
+}
+
+.settings-panel__button--edit {
+    background-color: var(--duo-navy);
+    color: white;
+}
+
+.settings-panel__button--edit:hover {
+    filter: brightness(1.1);
+}
+
+.settings-panel__button--save {
+    background-color: var(--duo-green);
+    color: white;
+}
+
+.settings-panel__button--save:hover {
+    background-color: var(--duo-green-dark);
+}
+
+.settings-panel__button--cancel {
+    background-color: var(--duo-red);
+    color: white;
+}
+
+.settings-panel__button--cancel:hover {
+    background-color: var(--duo-red-dark);
+}
+
+/* Resumo (modo visualização) */
+.settings-panel__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.settings-panel__summary-section {
+    padding: 16px;
+    background-color: var(--duo-gray-light);
+    border-radius: 6px;
+    border-left: 4px solid var(--duo-navy);
+}
+
+.settings-panel__summary-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--duo-gray-dark);
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.settings-panel__summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--duo-gray);
+}
+
+.settings-panel__summary-item:last-child {
+    border-bottom: none;
+}
+
+.settings-panel__summary-label {
+    font-size: 14px;
+    color: var(--duo-gray-dark);
+    font-weight: 500;
+}
+
+.settings-panel__summary-value {
+    font-size: 14px;
+    color: var(--duo-text);
+    font-weight: 600;
+}
+
+/* Responsividade: Mobile */
+@media (max-width: 768px) {
+    .settings-panel {
+        padding: 16px;
+    }
+
+    .settings-panel__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .settings-panel__title {
+        font-size: 20px;
+    }
+
+    .settings-panel__actions {
+        flex-direction: column;
+    }
+
+    .settings-panel__button {
+        width: 100%;
+    }
+
+    .settings-panel__summary-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+/* Impressão */
+@media print {
+    .settings-panel__button {
+        display: none;
+    }
+
+    .settings-panel {
+        break-inside: avoid;
+    }
+}

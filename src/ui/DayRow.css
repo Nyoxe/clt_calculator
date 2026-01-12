@@ -1,0 +1,101 @@
+/**
+ * DayRow.css - Cartoon Duolingo Style
+ */
+
+.day-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.day-row__date {
+  font-size: 16px;
+  color: var(--duo-navy);
+  min-width: 120px;
+}
+
+.day-row__times {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  color: var(--duo-text);
+  font-size: 14px;
+}
+
+.day-row__time-item strong {
+  color: var(--duo-gray-dark);
+}
+
+.day-row__input-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--duo-gray-dark);
+}
+
+.day-row__input {
+  border: 2px solid var(--duo-gray);
+  border-radius: 8px;
+  padding: 5px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.day-row__flags {
+  display: flex;
+  gap: 10px;
+}
+
+.day-row__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--duo-gray-dark);
+  cursor: pointer;
+}
+
+.day-row__checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--duo-green);
+}
+
+.day-row__button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.1s ease;
+}
+
+.day-row__button--edit {
+  background: var(--duo-gray);
+  color: var(--duo-navy);
+  border-bottom: 2px solid var(--duo-gray-dark);
+}
+
+.day-row__button--save {
+  background: var(--duo-green);
+  color: white;
+  border-bottom: 2px solid var(--duo-green-dark);
+}
+
+.day-row__button--cancel {
+  background: var(--duo-red);
+  color: white;
+  border-bottom: 2px solid var(--duo-red-dark);
+}
+
+.day-row__button:active {
+  transform: translateY(1px);
+  border-bottom-width: 0;
+}

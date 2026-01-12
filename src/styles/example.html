@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Estilos App CLT</title>
+    <link rel="stylesheet" href="./app.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header style="text-align: center; margin-bottom: 32px;">
+            <h1 style="color: #2196f3; margin-bottom: 8px;">Controle de Jornada CLT</h1>
+            <p style="color: #757575;">Exemplo de Estilos</p>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 1fr 400px; gap: 24px;">
+            <!-- Lista de Dias -->
+            <div>
+                <div class="days-list__header">Dias Trabalhados - Janeiro 2026</div>
+
+                <div class="days-list">
+                    <!-- Dia Normal -->
+                    <div class="day-row normal-day">
+                        <div class="day-row__date">Seg, 06/01/2026</div>
+                        <div class="day-row__times">
+                            <span><span class="day-row__time-label">Entrada:</span> 08:00</span>
+                            <span><span class="day-row__time-label">Saída:</span> 17:00</span>
+                            <span><span class="day-row__time-label">Intervalo:</span> 1h</span>
+                        </div>
+                        <span class="badge badge--normal">Normal</span>
+                    </div>
+
+                    <!-- Dia com Horas Extras -->
+                    <div class="day-row normal-day">
+                        <div class="day-row__date">Ter, 07/01/2026</div>
+                        <div class="day-row__times">
+                            <span><span class="day-row__time-label">Entrada:</span> 08:00</span>
+                            <span><span class="day-row__time-label">Saída:</span> 19:00</span>
+                            <span><span class="day-row__time-label">Intervalo:</span> 1h</span>
+                        </div>
+                        <span class="badge badge--normal">Normal</span>
+                    </div>
+
+                    <!-- Dia Normal -->
+                    <div class="day-row normal-day">
+                        <div class="day-row__date">Qua, 08/01/2026</div>
+                        <div class="day-row__times">
+                            <span><span class="day-row__time-label">Entrada:</span> 08:00</span>
+                            <span><span class="day-row__time-label">Saída:</span> 17:00</span>
+                            <span><span class="day-row__time-label">Intervalo:</span> 1h</span>
+                        </div>
+                        <span class="badge badge--normal">Normal</span>
+                    </div>
+
+                    <!-- Dia Normal -->
+                    <div class="day-row normal-day">
+                        <div class="day-row__date">Qui, 09/01/2026</div>
+                        <div class="day-row__times">
+                            <span><span class="day-row__time-label">Entrada:</span> 08:00</span>
+                            <span><span class="day-row__time-label">Saída:</span> 17:00</span>
+                            <span><span class="day-row__time-label">Intervalo:</span> 1h</span>
+                        </div>
+                        <span class="badge badge--normal">Normal</span>
+                    </div>
+
+                    <!-- Dia Normal -->
+                    <div class="day-row normal-day">
+                        <div class="day-row__date">Sex, 10/01/2026</div>
+                        <div class="day-row__times">
+                            <span><span class="day-row__time-label">Entrada:</span> 08:00</span>
+                            <span><span class="day-row__time-label">Saída:</span> 17:00</span>
+                            <span><span class="day-row__time-label">Intervalo:</span> 1h</span>
+                        </div>
+                        <span class="badge badge--normal">Normal</span>
+                    </div>
+
+                    <!-- Dia Normal (Sábado) -->
+                    <div class="day-row normal-day">
+                        <div class="day-row__date">Sáb, 11/01/2026</div>
+                        <div class="day-row__times">
+                            <span><span class="day-row__time-label">Entrada:</span> 08:00</span>
+                            <span><span class="day-row__time-label">Saída:</span> 12:00</span>
+                            <span><span class="day-row__time-label">Intervalo:</span> 0h</span>
+                        </div>
+                        <span class="badge badge--normal">Normal</span>
+                    </div>
+
+                    <!-- Folga (Domingo) -->
+                    <div class="day-row folga">
+                        <div class="day-row__date">Dom, 12/01/2026</div>
+                        <div class="day-row__times">
+                            <span style="color: #42a5f5; font-weight: 600;">Folga Semanal</span>
+                        </div>
+                        <span class="badge badge--folga">Folga</span>
+                    </div>
+
+                    <!-- Feriado -->
+                    <div class="day-row holiday">
+                        <div class="day-row__date">Qua, 01/01/2026</div>
+                        <div class="day-row__times">
+                            <span style="color: #ef5350; font-weight: 600;">Ano Novo</span>
+                        </div>
+                        <span class="badge badge--holiday">Feriado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumo Mensal -->
+            <div>
+                <div class="summary">
+                    <h2 class="summary__title">Resumo Mensal</h2>
+
+                    <div class="summary__section">
+                        <h3 class="summary__section-title">Horas Trabalhadas</h3>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Horas Normais:</span>
+                            <span class="summary__value">176.00h</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Horas Extras 50%:</span>
+                            <span class="summary__value summary__value--warning">12.50h</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Horas Extras 100%:</span>
+                            <span class="summary__value summary__value--danger">4.00h</span>
+                        </div>
+                    </div>
+
+                    <div class="summary__section">
+                        <h3 class="summary__section-title">Valores Financeiros</h3>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Valor Hora:</span>
+                            <span class="summary__value">R$ 10,00</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Extras 50%:</span>
+                            <span class="summary__value summary__value--warning">R$ 187,50</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Extras 100%:</span>
+                            <span class="summary__value summary__value--danger">R$ 80,00</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">DSR:</span>
+                            <span class="summary__value summary__value--success">R$ 150,00</span>
+                        </div>
+                    </div>
+
+                    <div class="summary__section" style="border-top: 2px solid #e0e0e0; padding-top: 16px;">
+                        <div class="summary__item">
+                            <span class="summary__label">Salário Base:</span>
+                            <span class="summary__value">R$ 2.200,00</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Valor Bruto:</span>
+                            <span class="summary__value summary__value--primary">R$ 2.617,50</span>
+                        </div>
+
+                        <div class="summary__item">
+                            <span class="summary__label">Desconto INSS:</span>
+                            <span class="summary__value summary__value--danger">- R$ 218,46</span>
+                        </div>
+
+                        <div class="summary__item"
+                            style="background-color: #e3f2fd; padding: 12px; margin: 0 -16px; border-radius: 4px;">
+                            <span class="summary__label" style="font-size: 16px;">Valor Líquido:</span>
+                            <span class="summary__value summary__value--total">R$ 2.399,04</span>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 16px; padding: 12px; background-color: #fff9e6; border-left: 4px solid #ffc107; border-radius: 4px;">
+                        <p style="margin: 0; font-size: 13px; color: #777;">
+                            <strong style="color: #555;">Nota:</strong> Os valores são calculados com base na CLT
+                            vigente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

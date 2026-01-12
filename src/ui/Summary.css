@@ -1,0 +1,116 @@
+/**
+ * Summary.css - Cartoon Duolingo Style (Navy Version)
+ */
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.summary__title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--duo-white);
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary__section {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary__section:last-of-type {
+    border-bottom: none;
+}
+
+.summary__section-title {
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--duo-blue);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.summary__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.summary__label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.summary__value {
+    color: var(--duo-white);
+}
+
+/* Modificadores de valor */
+.summary__value--extra50 {
+    color: var(--duo-orange);
+}
+
+.summary__value--extra100 {
+    color: var(--duo-red);
+}
+
+.summary__value--dsr {
+    color: var(--duo-green);
+}
+
+.summary__value--highlight {
+    color: var(--duo-green);
+    font-weight: 800;
+}
+
+.summary__value--negative {
+    color: #FF6B6B;
+}
+
+/* Seção Final / Totalizer */
+.summary__section--final {
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary__item--total {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary__value--total {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--duo-green);
+}
+
+.summary__footer {
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.summary__note strong {
+    color: rgba(255, 255, 255, 0.6);
+}
